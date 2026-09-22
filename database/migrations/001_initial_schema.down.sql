@@ -1,0 +1,10 @@
+DROP TRIGGER IF EXISTS transaction_events_append_only ON transaction_events;
+DROP TRIGGER IF EXISTS transaction_terms_acceptances_append_only ON transaction_terms_acceptances;
+DROP TRIGGER IF EXISTS provider_events_append_only ON provider_events;
+DROP TRIGGER IF EXISTS reconciliation_items_append_only ON reconciliation_items;
+DROP TRIGGER IF EXISTS ledger_operations_append_only ON ledger_operations;
+DROP TRIGGER IF EXISTS ledger_entry_lines_append_only ON ledger_entry_lines;
+DROP TRIGGER IF EXISTS audit_logs_append_only ON audit_logs;
+DROP FUNCTION IF EXISTS reject_append_only_mutation();
+DROP TABLE IF EXISTS notification_deliveries, kyc_documents, risk_assessments, audit_logs, ledger_entry_lines, ledger_operations, ledger_accounts, reconciliation_items, reconciliation_runs, provider_events, refund_attempts, refunds, payout_attempts, payouts, idempotency_keys, transaction_terms_acceptances, transaction_events, transaction_holds, disputes, shipments, payment_accounts, payments, transactions, configuration_versions, buyers, merchants, users CASCADE;
+DROP TYPE IF EXISTS attempt_status, risk_level, ledger_operation_status, ledger_direction, reconciliation_status, provider_event_processing_status, hold_type, payout_status, dispute_status, inspection_status, shipment_status, payment_status, transaction_status, user_role, record_status CASCADE;
